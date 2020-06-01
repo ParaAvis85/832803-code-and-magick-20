@@ -11,13 +11,13 @@ var BAR_WIDTH = 40;
 var BAR_HEIGHT = 150;
 
 
-function renderCloud (ctx, x, y, color) {
+function renderCloud(ctx, x, y, color) {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
   ctx.strokeRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
-};
+}
 
-function getMaxElement (arr) {
+function getMaxElement(arr) {
   var maxElement = arr[0];
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] > maxElement) {
@@ -25,11 +25,11 @@ function getMaxElement (arr) {
     }
   }
   return maxElement;
-};
+}
 
-function getRandomNumber (max) {
+function getRandomNumber(max) {
   return Math.floor(Math.random() * Math.floor(max));
-};
+}
 
 window.renderStatistics = function (ctx, players, times) {
   renderCloud(ctx, CLOUD_X + 10, CLOUD_Y + 10, 'rgba(0, 0, 0, 0.7)');
